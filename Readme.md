@@ -11,7 +11,7 @@ This plugin comes in two modes for Offline support and Apollo Hooks compatiblity
 Install plugin
 
 ```bash
-npm i @praisegeek/gatsby-plugin-appsync
+npm i gatsby-plugin-appsync
 ```
 
 ## Usage
