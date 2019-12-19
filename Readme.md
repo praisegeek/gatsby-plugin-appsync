@@ -1,7 +1,5 @@
 ## Gatsby Plugin AppSync
 
-## Description
-
 A Gatsby plugin that makes working with AWS AppSync Client and React Apollo a breeze.
 
 ## Quick Start
@@ -72,9 +70,10 @@ To enable offline support, ensure _`"legacy"`_ is set to `true` in your gatsby-c
 ## Next Steps
 
 **Custom Rehydrate component**
+For legacy mode only with offline support
 
 ```js
-// Shadow copy @praisegeek/gatsby-plugin-appsync/src/rehydrate.js
+// Shadow copy ./src/gatsby-plugin-appsync/rehydrate.js
 
 import React from "react";
 import { Rehydrated } from "aws-appsync-react";
