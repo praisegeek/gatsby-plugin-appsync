@@ -3,6 +3,7 @@
   "license": "MIT",
   "version": "1.0.6",
   "main": "index.js",
+  "author": "Praise Emerenini <praisegeek@gmail.com>",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
