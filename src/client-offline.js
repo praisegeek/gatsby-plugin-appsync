@@ -1,28 +1,28 @@
 import React from "react";
 import { ApolloProvider } from "react-apollo-legacy";
 import AWSAppSyncClient from "aws-appsync";
-import Rehydrated from "./rehydrate";
-
 import Auth from "@aws-amplify/auth";
 
+import Rehydrated from "./rehydrate";
+
 Auth.configure({
-  region: process.env.AWS_REGION,
-  userPoolId: process.env.COGNITO_USER_POOL_ID,
-  identityPoolId: process.env.COGNITO_IDENTITY_POOL_ID,
-  userPoolWebClientId: process.env.COGNITO_APP_CLIENT_ID
+  region: process.env.GATSBY_AWS_REGION,
+  userPoolId: process.env.GATSBY_COGNITO_USER_POOL_ID,
+  identityPoolId: process.env.GATSBY_COGNITO_IDENTITY_POOL_ID,
+  userPoolWebClientId: process.env.GATSBY_COGNITO_APP_CLIENT_ID
 });
 
-const url = process.env.GRAPHQL_ENDPOINT;
-const region = process.env.AWS_REGION;
+const url = process.env.GATSBY_GRAPHQL_ENDPOINT;
+const region = process.env.GATSBY_AWS_REGION;
 
 const auth =
   process.env.AUTH_TYPE === "API_KEY"
     ? {
-        type: process.env.AUTH_TYPE,
-        apiKey: process.env.AUTH_API_KEY
+        type: process.env.GATSBY_AUTH_TYPE,
+        apiKey: process.env.GATSBY_AUTH_API_KEY
       }
     : {
-        type: process.env.AUTH_TYPE,
+        type: process.env.GATSBY_AUTH_TYPE,
         credentials: () => Auth.currentCredentials()
       };
 

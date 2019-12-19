@@ -14,25 +14,11 @@ npm i gatsby-plugin-appsync
 
 ## Usage
 
-Create an environment variable file which holds config params inside the root of your project
+Rename **.env.example.** on the root of your project to your **.env.[stage-name]** and replace variables to your own.
 
-**.env.[stage-name]**
-
-e.g
+For example,
 
 .env.development
-
-```yaml
-AWS_REGION=eu-west-2
-COGNITO_USER_POOL_ID=
-COGNITO_APP_CLIENT_ID=
-COGNITO_IDENTITY_POOL_ID=
-AUTH_TYPE=API_KEY # AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT
-AUTH_API_KEY=12345 # if using API_KEY
-GRAPHQL_ENDPOINT=<AppSync GraphQL Endpoint>
-S3_BUCKET_URL=<S3 Bucket URL>  # Required for s3 uploads using complexObjectsCredentials
-S3_MAX_ATTACHMENT_SIZE=2000000
-```
 
 Add plugin in gatsby-config.js
 
@@ -49,7 +35,7 @@ module.exports = {
 
 Same usage applies as using the latest version of React Apollo ( v 3+), with hooks.
 
-e.g
+For example,
 
 ```js
 import { useQuery, useLazyQuery } from "@apollo/react-hooks";
@@ -79,7 +65,7 @@ module.exports = {
 
 Since NPM drop in replacement was used to alias both apollo-client@2.6.4 and react-apollo@2.5.6 for offline support and cold install, Queries, Mutations or Subscriptions can then be imported using the hint below
 
-e.g
+For example,
 
 ```js
 import { Query, Mutation, Subscription, graphql } from "react-apollo-legacy";
