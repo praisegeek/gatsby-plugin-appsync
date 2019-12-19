@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-appsync",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "keywords": [
     "gatsby",
