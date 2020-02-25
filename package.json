@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-appsync",
   "license": "MIT",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "index.js",
   "author": "Praise Emerenini <praisegeek@gmail.com>",
   "keywords": [
