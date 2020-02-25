@@ -1,3 +1,7 @@
 import fetch from "isomorphic-fetch";
+import React from "react";
+import { AppSyncProvider } from "./index";
 
-export { wrapRootElement } from "./src/wrap-root-element";
+export const wrapRootElement = ({ element }, options) => (
+  <AppSyncProvider options={options}>{element}</AppSyncProvider>
+);

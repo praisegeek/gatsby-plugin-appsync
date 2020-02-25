@@ -8,15 +8,18 @@ const config = require("dotenv").config({
 });
 
 exports.onPreBootstrap = ({ reporter }) => {
-  const envString = `GATSBY_AWS_REGION=eu-west-2
+  const envString = `\
+GATSBY_GRAPHQL_ENDPOINT=http://localhost:20002/graphql
+GATSBY_REGION=eu-west-2
 GATSBY_COGNITO_USER_POOL_ID=
-GATSBY_COGNITO_APP_CLIENT_ID=
 GATSBY_COGNITO_IDENTITY_POOL_ID=
+GATSBY_COGNITO_APP_CLIENT_ID=
+GATSBY_S3_BUCKET
+GATSBY_S3_REGION
+GATSBY_AUTH_API_KEY=da2-fakeApiId123456
 GATSBY_AUTH_TYPE=API_KEY
-GATSBY_AUTH_API_KEY=12345
-GATSBY_GRAPHQL_ENDPOINT=http://localhost:4000/graphql
-GATSBY_S3_BUCKET_URL=
-GATSBY_S3_MAX_ATTACHMENT_SIZE=2000000`;
+GATSBY_APOLLO_CLIENT_VERSION=WITH_HOOKS
+`;
 
   const currEnv = path.join(`.env.${nodeEnv}`);
   const envPath = path.join(`.env.example`);
