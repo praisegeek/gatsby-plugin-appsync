@@ -99,7 +99,7 @@ export const client = clientTypes[clientVersion] || clientTypes["LEGACY"];
 export const withAppSync = WrappedComponent => {
   if (clientVersion === "LEGACY") {
     const { ApolloProvider } = require("react-apollo-legacy");
-    const Rehydrated = require("./src/rehydrate").default;
+    const Rehydrated = require("./src/Rehydrate").default;
     return class extends React.Component {
       render() {
         return (
@@ -138,7 +138,7 @@ export const AppSyncProvider = ({ options, ...props }) => {
 
   if (clientVersion === "LEGACY") {
     const { ApolloProvider } = require("react-apollo-legacy");
-    const Rehydrated = require("./src/rehydrate").default;
+    const Rehydrated = require("./src/Rehydrate").default;
     return (
       <ApolloProvider client={client}>
         <Rehydrated>{props.children}</Rehydrated>

@@ -5,3 +5,4 @@ public
 .cache
 .env
 .env.*
+yarn.lock
