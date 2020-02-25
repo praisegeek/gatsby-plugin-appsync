@@ -16,7 +16,7 @@ npm i gatsby-plugin-appsync
 
 Rename **.env.example** created by this plugin inside your root folder to your environment name. e.g **.env.development** if NODE_ENV is set to development. Also change the settings there
 
-GATSBY_GRAPHQL_ENDPOINT=http://localhost:20002/graphql
+```GATSBY_GRAPHQL_ENDPOINT=http://localhost:20002/graphql
 GATSBY_REGION=eu-west-2
 GATSBY_COGNITO_USER_POOL_ID=
 GATSBY_COGNITO_IDENTITY_POOL_ID=
@@ -26,6 +26,7 @@ GATSBY_S3_REGION
 GATSBY_AUTH_API_KEY=da2-fakeApiId123456
 GATSBY_AUTH_TYPE=API_KEY | AMAZON_COGNITO_USER_POOLS | AWS_IAM
 GATSBY_APOLLO_CLIENT_VERSION=WITH_HOOKS | LEGACY
+```
 
 ## Plugin default options in node-config.js
 
